@@ -22,7 +22,7 @@ function Section(props){
 	return(
 		<div className="col-12 col-lg-8 order-lg-2">
 			<div className="row">
-				<ol className="col-12 col-lg-6 breadcrumb profile mb-0">
+				<ol className="col-12 col-lg-6 breadcrumb  mb-0">
 					<li className="breadcrumb-item"><a href="">Inicio</a></li>
 					<li className="breadcrumb-item active">{element.seccion}</li>
 				</ol>

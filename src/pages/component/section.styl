@@ -1,6 +1,7 @@
+@require "../container/home.styl"
 .breadcrumb
 	background  transparent
-	@media $uplg
+	+for_breakpoint(uplg)
 		font-size 0.8em
 	a
 		color #009626
@@ -12,9 +13,9 @@
 		&.active
 			color grey
 			font-weight 400
-	@media $xs
+	+for_breakpoint(xs)
 		font-size 0.7em
-	@media $uplg
+	+for_breakpoint(uplg)
 		&.profile
 			margin-left 190px
 #ProfileTour
@@ -29,11 +30,16 @@
 		display:block;
 .btn-link
 	background-color: #E8B70C;
-	color: #fff;
+	color: #fff !important;
 	font-size: 14px;
+	transition 0.6 ease
+	&:hover
+		background #E8B80C
+		
+		
 .btn-360
 	background-color: #009619;
-	color: #fff;
+	color: #fff !important;
 	font-size: 14px;
 .btn-360, .btn-link
 	-moz-user-select: none;
