@@ -1,17 +1,16 @@
 import React from 'react'
 
-function Modal(props)
+function ModalGoogle(props)
 {
 	console.log("modal: "+ props.LinkVideo)
 	return(
-		<div className="modal videomodalcont fade" id="videoModal" role="dialog" aria-labelledby="videoModal"
+		<div className="modal videomodalcont fade" id="googleModal" role="dialog" aria-labelledby="googleModal"
 		aria-hidden="true">
 			<div className="modal-dialog modal-lg">
 				<div className="modal-content">
 					<div className="modal-body">
 						<div className='embed-container'>
-							<iframe width="100%" height="500px" src={"https://www.youtube.com/embed/"+ props.LinkVideo} frameBorder='0' allowFullScreen></iframe>
-							
+							<iframe src={props.source} width="100%" height="500" frameborder="0" allowfullscreen></iframe>	
 						</div>
 					</div>
 				</div>
@@ -20,4 +19,4 @@ function Modal(props)
 	)
 }
 
-export default Modal;
+export default ModalGoogle;

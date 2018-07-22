@@ -25,7 +25,11 @@ class Home extends Component {
 		this.state = {
 			items: [],
 			atractivos: [],
-			images: [],
+			images: "",
+			images2: "",
+			images3: "",
+			images4: "",
+			images5: "",
 			url:null,
 			video:"",
 		};
@@ -34,20 +38,37 @@ class Home extends Component {
             return results.json()
         })
         .then( data => {
-            this.setState({ items: data[0],atractivos:data[0].atractivos, images:data[0].img[0], url:data[0].CTA,video:data[0].videoYT });
-            // console.log(video(this.state.video))
+        	console.log(data[0]);
+            this.setState({ items: data[0],
+            	atractivos:data[0].atractivos, 
+            	images:data[0].img[0],
+            	images2:data[0].img[1],
+            	images3:data[0].img[2],
+            	images4:data[0].img[3],
+            	images5:data[0].img[4],
+            	url:data[0].CTA,
+            	video:data[0].videoYT });
+           
+            	
         });
 	}
   render() {
 
-  	console.log(video(this.state.video));
     return (
       <div className="App">
 		<Navbar/>
 		<Header/>
 		<div className="container">
 			<div className="row">
-				<Section event={this.state.atractivos} element={this.state.items} image={this.state.images} video={video(this.state.video)}/>
+				<Section 
+				event={this.state.atractivos} 
+				element={this.state.items} 
+				image={this.state.images}
+				image2={this.state.images2}
+				image3={this.state.images3}
+				image4={this.state.images4}
+				image5={this.state.images5}
+				video={video(this.state.video)}/>
 				<SideBar url={this.state.url}/>
 			</div>
 		</div>

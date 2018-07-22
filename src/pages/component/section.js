@@ -1,6 +1,8 @@
 import React from 'react'
 import Modal from '../../widgets/component/modal.js'
 import Gallery from '../../widgets/component/gallery.js'
+import ModalGoogle from '../../widgets/component/googleStreet.js'
+
 import './section.styl'
 function openModal() {
 	// document.getElementById('myModal').style.display = "block";
@@ -9,12 +11,16 @@ function openModal() {
 function Section(props){
 	let element = props.element;
 	var image = props.image;
+	var image2 = props.image2;
+	var image3 = props.image3;
+	var image4 = props.image4;
+	var image5 = props.image5;
 	var video =props.video;
 	console.log("component video: "+video);
 	// var param =(video.split('/'))
 	// console.log(param)
 	return(
-		<div className="col-12 col-lg-8 mt-lg-5 pt-lg-5 order-lg-2">
+		<div className="col-12 col-lg-8 order-lg-2">
 			<div className="row">
 				<ol className="col-12 col-lg-6 breadcrumb profile mb-0">
 					<li className="breadcrumb-item"><a href="">Inicio</a></li>
@@ -51,9 +57,11 @@ function Section(props){
                        data-target="#imageModal"><i className="fa fa-image"></i> Ver imágenes</a>
 					</div>
 					<div className="col-6  px-0">
-						<a class="btn-360 btn-block" href={element.maps360}><i className="fa fa-eye"></i> Vista 360º</a>
+						<a class="btn-360 btn-block" data-toggle="modal"
+                       data-target="#googleModal"><i className="fa fa-eye"></i> Vista 360º</a>
 					</div>
 			</div>
+
 			<div className="row my-3">
 					
 					<div className="col-12">
@@ -103,7 +111,8 @@ function Section(props){
 				</div>		
 			</div>
 			<Modal LinkVideo={video}/>
-			<Gallery source={image}/>
+			<Gallery source={image} source2={image2} source3={image3}  source4={image4}  source5={image5}/>
+			<ModalGoogle source={element.maps360}/>
 		</div>
 
 	)

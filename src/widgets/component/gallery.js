@@ -1,9 +1,11 @@
 import React from 'react'
-
+import './gallery.styl'
 function Gallery(props){
 	let ImageSource =  props.source,
-	ImageSource =  props.source,
-	ImageSource =  props.source
+	ImageSource2 =  props.source2,
+	ImageSource3 =  props.source3,
+	ImageSource4 =  props.source4,
+	ImageSource5 =  props.source5;
 	return(
 		<div className="modal videomodalcont fade" id="imageModal" role="dialog" aria-labelledby="videoModal"
 		aria-hidden="true">
@@ -27,22 +29,42 @@ function Gallery(props){
 									</div>
 									<div className="carousel-item">
 										<picture>
-											<source media="(max-width: 465px)" srcSet={ImageSource.source}/>
-											<source media="(min-width: 769px)" srcSet={ImageSource.source}/>
-											<img src={ImageSource.source} alt="Slider" className="d-block w-100"/>
+											<source media="(max-width: 465px)" srcSet={ImageSource2.source}/>
+											<source media="(min-width: 769px)" srcSet={ImageSource2.source}/>
+											<img src={ImageSource2.source} alt="Slider" className="d-block w-100"/>
 										</picture>
 										<div className="carousel-caption d-none d-md-block">
-											<h2>{ImageSource.alt} </h2>
+											<h2>{ImageSource2.alt} </h2>
 										</div>
 									</div>
 									<div className="carousel-item">
 										<picture>
-											<source media="(max-width: 465px)" srcSet={ImageSource.source}/>
-											<source media="(min-width: 769px)" srcSet={ImageSource.source}/>
-											<img src={ImageSource.source} alt="Slider" className="d-block w-100"/>
+											<source media="(max-width: 465px)" srcSet={ImageSource3.source}/>
+											<source media="(min-width: 769px)" srcSet={ImageSource3.source}/>
+											<img src={ImageSource3.source} alt="Slider" className="d-block w-100"/>
 										</picture>
 										<div className="carousel-caption d-none d-md-block">
-											<h2>{ImageSource.alt} </h2>
+											<h2>{ImageSource3.alt} </h2>
+										</div>
+									</div>
+								<div className="carousel-item">
+										<picture>
+											<source media="(max-width: 465px)" srcSet={ImageSource4.source}/>
+											<source media="(min-width: 769px)" srcSet={ImageSource4.source}/>
+											<img src={ImageSource4.source} alt="Slider" className="d-block w-100"/>
+										</picture>
+										<div className="carousel-caption d-none d-md-block">
+											<h2>{ImageSource4.alt} </h2>
+										</div>
+									</div>
+									<div className="carousel-item">
+										<picture>
+											<source media="(max-width: 465px)" srcSet={ImageSource5.source}/>
+											<source media="(min-width: 769px)" srcSet={ImageSource5.source}/>
+											<img src={ImageSource5.source} alt="Slider" className="d-block w-100"/>
+										</picture>
+										<div className="carousel-caption d-none d-md-block">
+											<h2>{ImageSource5.alt} </h2>
 										</div>
 									</div>
 								</div>
