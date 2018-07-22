@@ -1,0 +1,54 @@
+.breadcrumb
+	background  transparent
+	@media $uplg
+		font-size 0.8em
+	a
+		color #009626
+		&:hover
+			text-decoration overline !important
+	.breadcrumb-item
+		&:before
+			color #009626 !important
+		&.active
+			color grey
+			font-weight 400
+	@media $xs
+		font-size 0.7em
+	@media $uplg
+		&.profile
+			margin-left 190px
+#ProfileTour
+	position relative
+	.video
+		position absolute
+		z-index 3
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		display:block;
+.btn-link
+	background-color: #E8B70C;
+	color: #fff;
+	font-size: 14px;
+.btn-360
+	background-color: #009619;
+	color: #fff;
+	font-size: 14px;
+.btn-360, .btn-link
+	-moz-user-select: none;
+	border-radius: none;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 400;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	
+.videoFrame
+	width 760px
+	height 500px
+	@media $lg
+		width 500px !important

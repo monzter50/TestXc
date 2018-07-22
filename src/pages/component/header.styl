@@ -1,0 +1,82 @@
+// #navbar-main
+// 	li
+// 		width 100px
+// 		&.mnu-quiero
+// 			background-color #009626
+// 				&:after
+// 					content ''
+// 					width 0
+// 					height 0
+// 					border-left 20px solid #009626
+// 					border-top 30px solid transparent
+// 					border-bottom 30px solid transparent
+// 					position absolute
+// 					top 0
+// 					right -20px
+// 					z-index 100
+// 	ul
+// 		& > li
+// 			width 100%
+// 			text-align left
+// 			& > a
+// 				padding 7px 10px
+// 				line-height 20px!important
+
+// #navbar-main li:nth-child(1) a,#navbar-main li:nth-child(5) a
+// 	line-height 40px
+.wrapper
+	text-align center
+	margin 50px auto
+.tabs
+	margin-top 50px
+	font-size 15px
+	padding 0px
+	list-style none
+	background #fff
+	display inline-block
+	position relative
+	li
+		width: 14.28%
+	a:nth-child(n+2)
+		text-decoration none
+		color #777
+		text-transform uppercase
+		padding 20px 50px
+		display inline-block
+		position relative
+		z-index 1
+		transition-duration 0.6s
+		border 1px solid black
+		border-left none
+		&.active
+			color white
+			background-color #E8B70C
+			padding 44px 50px 20px 50px
+			border none
+			&:after
+				content ""
+				position absolute
+				left 100%
+				top 0
+				width: 0; 
+				height: 0; 
+				border-top: 40px solid transparent; 
+				border-left: 40px solid #E8B70C; 
+				border-bottom: 45px solid transparent;	
+		i
+			margin-right 5px
+    .selector
+		height 100%
+		display inline-block
+		position absolute
+		left 0px
+		top 0px
+		z-index 1
+		border-radius 50px
+		transition-duration 0.6s
+		transition-timing-function cubic-bezier(0.68, -0.55, 0.265, 1.55)
+		background #05abe0
+		background -moz-linear-gradient(45deg, #05abe0 0%, #8200f4 100%)
+		background -webkit-linear-gradient(45deg, #05abe0 0%,#8200f4 100%)
+		background linear-gradient(45deg, #05abe0 0%,#8200f4 100%)
+		
