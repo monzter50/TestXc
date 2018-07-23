@@ -9,9 +9,6 @@ function Section(props){
 	let element = props.element,
  		image = props.image,
 		image2 = props.image2,
-		image3 = props.image3,
-		image4 = props.image4,
-		image5 = props.image5,
 		video = props.video;
 	return(
 		<div className="col-12 col-lg-7 order-lg-2">
@@ -32,9 +29,9 @@ function Section(props){
 					<div className="carousel-inner">
 						<div className="carousel-item active">
 							<picture>
-								<source media="(max-width: 768px)" srcset={image.source}/>
-								<source media="(min-width: 769px)" srcset={image.source}/>
-								<img src={image.source} alt={image.alt} class="img-fluid w-100"/>
+								<source media="(max-width: 768px)" srcset={image2.source}/>
+								<source media="(min-width: 769px)" srcset={image2.source}/>
+								<img src={image2.source} alt={image2.alt} class="img-fluid w-100"/>
 							</picture>
 						</div>
 					</div>
@@ -97,7 +94,7 @@ function Section(props){
 			</div>
 			{/*Modales hechos con componentes funcionales a cada uno se le pasa un valor consumido por el api*/}
 			<Modal LinkVideo={video}/>
-			<Gallery source={image} source2={image2} source3={image3}  source4={image4}  source5={image5}/>
+			<Gallery source={image} />
 			<ModalGoogle source={element.maps360}/>
 		</div>
 	)
