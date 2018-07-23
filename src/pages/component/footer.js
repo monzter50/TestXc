@@ -1,8 +1,8 @@
 import React from 'react'
-
+import './footer.styl'
 function Footer(props){
 	return(
-		<footer className="container-fluid">
+		<footer className="container-fluid  px-0 mx-0">
 			<div className="container py-5">
 				<div className="row justify-content-center">
 					<div className="col-12 px-5 pb-5">
@@ -80,34 +80,37 @@ function Footer(props){
 
 				</div>
 			</div>
-			<div className="container">
-				<div className="row">
-				<div className="col-12 my-3">
-					<h4>Atención a Clientes / Ventas:</h4>
-				</div>	
-					<div className="col-12 col-lg-4">
-						<ul className="">
-							<li><span><b>Cancún:</b> 000-000-0000</span></li>
-							<li><span><b>Cancún:</b> 000-000-0000</span></li>
-							<li><span><b>Cancún:</b> 000-000-0000</span></li>
-							<li><span><b>Cancún:</b> 000-000-0000</span></li>
-						</ul>
-					</div>
-					<div className="col-12 col-lg-4">
-						<ul className="">
-							<li><span><b>Cancún:</b> 000-000-0000</span></li>
-							<li><span><b>Cancún:</b> 000-000-0000</span></li>
-							<li><span><b>Cancún:</b> 000-000-0000</span></li>
-							<li><span><b>Cancún:</b> 000-000-0000</span></li>
-						</ul>
-					</div>
-					<div className="col-12 col-lg-4">
-						<ul className="">
-							<li><span><b>Cancún:</b> 000-000-0000</span></li>
-							<li><span><b>Cancún:</b> 000-000-0000</span></li>
-							<li><span><b>Cancún:</b> 000-000-0000</span></li>
-							<li><span><b>Cancún:</b> 000-000-0000</span></li>
-						</ul>
+			<div className="container-fluid bkg-footer py-4 px-0 mx-0">
+				<div  className="container">
+					
+					<div className="row">
+					<div className="col-12 my-3">
+						<h4>Atención a Clientes / Ventas:</h4>
+					</div>	
+						<div className="col-12 col-lg-4">
+							<ul className="">
+								<li><span><b>Cancún:</b> 000-000-0000</span></li>
+								<li><span><b>Cancún:</b> 000-000-0000</span></li>
+								<li><span><b>Cancún:</b> 000-000-0000</span></li>
+								<li><span><b>Cancún:</b> 000-000-0000</span></li>
+							</ul>
+						</div>
+						<div className="col-12 col-lg-4">
+							<ul className="">
+								<li><span><b>Cancún:</b> 000-000-0000</span></li>
+								<li><span><b>Cancún:</b> 000-000-0000</span></li>
+								<li><span><b>Cancún:</b> 000-000-0000</span></li>
+								<li><span><b>Cancún:</b> 000-000-0000</span></li>
+							</ul>
+						</div>
+						<div className="col-12 col-lg-4">
+							<ul className="">
+								<li><span><b>Cancún:</b> 000-000-0000</span></li>
+								<li><span><b>Cancún:</b> 000-000-0000</span></li>
+								<li><span><b>Cancún:</b> 000-000-0000</span></li>
+								<li><span><b>Cancún:</b> 000-000-0000</span></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>

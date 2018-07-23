@@ -2,7 +2,7 @@ import React from 'react'
 
 function ModalGoogle(props)
 {
-	console.log("modal: "+ props.LinkVideo)
+	// Se consume el api de la url de la vista 360
 	return(
 		<div className="modal videomodalcont fade" id="googleModal" role="dialog" aria-labelledby="googleModal"
 		aria-hidden="true">

@@ -1,52 +1,115 @@
+.processes-block
+    display flex
+    flex-wrap nowrap
+    align-content center
+    flex-grow 1
+    flex-shrink 1
+    flex-basis 300px
+    list-style none
+    overflow hidden
+    padding-left 10px
+    .processes-item
+        flex-basis 25%
+        position relative
+        font-size 16px
+        line-height 16px
+        padding 14px 30px 20px 20px
+        z-index 1
+        cursor pointer
+        a
+            color white
+        &:before
+            top 0px
+            bottom 50%
+            transform skewX(15deg) translateX(-5px)
+        &:after
+            top 49%
+            bottom 0px
+            transform skewX(-15deg) translateX(-5px)
+        &:first-child
+            &:before
+                width 200%
+                transform skewX(15deg) translateX(-50%)
+            &:after
+                width 200%
+                transform skewX(-15deg) translateX(-50%)
+    .process-icon
+        display block
+        font-size 30px
+        margin-bottom 10px
+    .title
+        display block
+        font-size 14px
+        font-weight bold
+        margin-bottom 4px
+    .active .title
+        display block
+        font-size 14px
+        line-height: 40px;
+        color white
+        
 
-.wrapper
-	text-align center
-	margin 40px auto
-.tabs
-	font-size 15px
-	padding 0px
-	background #fff
-	position relative
-	.nav-item
-		width: 14.28%
-		.nav-link:nth-child(n+2)
-			text-decoration none
-			color #777
-			text-transform uppercase
-			padding 20px 50px
-			position relative
-			z-index 1
-			border 1px solid black
-			border-left none
-			&.active
-				color white
-				background-color #E8B70C
-				padding 44px 50px 20px 50px
-				border none
-				&:after
-					content ""
-					position absolute
-					left 100%
-					top 0
-					width: 0; 
-					height: 0; 
-					border-top: 40px solid transparent; 
-					border-left: 40px solid #E8B70C; 
-					border-bottom: 45px solid transparent;	
-		i
-			margin-right 5px
-    .selector
-		height 100%
-		display inline-block
-		position absolute
-		left 0px
-		top 0px
-		z-index 1
-		border-radius 50px
-		transition-duration 0.6s
-		transition-timing-function cubic-bezier(0.68, -0.55, 0.265, 1.55)
-		background #05abe0
-		background -moz-linear-gradient(45deg, #05abe0 0%, #8200f4 100%)
-		background -webkit-linear-gradient(45deg, #05abe0 0%,#8200f4 100%)
-		background linear-gradient(45deg, #05abe0 0%,#8200f4 100%)
-		
+.processes-block .processes-item:first-child:before,
+.processes-block .processes-item:first-child:after
+    content ""
+    position absolute
+    z-index -1
+    left 0px
+    right 0px
+
+.processes-block .processes-item:first-child:before,
+.processes-block .processes-item:first-child:after
+    width 200%
+
+.processes-block .processes-item.active:before,
+.processes-block .processes-item.active:after
+    background-color #009626
+    
+
+@media (max-width: 600px)
+    .processes-block
+        flex-direction column
+        padding-left 0px
+        .process-icon
+            float left
+            height 100%
+            margin-right 20px
+            margin-bottom 20px
+        .processes-item
+            &:before
+                border-left 0 none
+                border-bottom 4px solid white
+                top 0
+                bottom 0
+                left 0
+                transform skewY(5deg) translateX(0px)
+                width 50%
+            &:after
+                border-left 0 none
+                border-bottom 4px solid white
+                left auto
+                top 0
+                bottom 0
+                right 0
+                transform skewY(-5deg) translateX(0px)
+                width 50%
+            &:first-child
+                &:before
+                    width 50%
+                    height 200%
+                    transform skewY(5deg) translateY(-50%)
+                &:after
+                    width 50%
+                    height 200%
+                    transform skewY(-5deg) translateY(-50%)
+
+    .processes-block .process-icon,
+    .processes-block .title,
+    .processes-block .description
+        position relative
+        z-index 5
+
+    .processes-block .processes-item:last-child:before,
+    .processes-block .processes-item:last-child:after
+        width 50%
+        height 200%

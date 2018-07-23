@@ -1,0 +1,16 @@
+<---------5 cosas que se utilizaron para mejorar el performance------------>
+
+**Pon el CSS primero
+Al colocar el CSS en la parte superior del HTML, nos aseguramos de que todas las imágenes en background comiencen a cargarse inmediatamente, con el objeto de que nuestro sitio se muestre lo más rápido posible.
+
+**Mueve el JavaScript al Footer
+Trasladar los archivos JavaScript al Footer es lo más rápido y fácil que podemos hacer para mejorar el rendimiento front-end. Muchos navegadores bloquean las descargas paralelas al cargar archivos JavaScript externos, poniendo los archivos al footer, los navegadores empezaran a cargar otras cosas primero.
+
+**Hospedar assets en diferentes dominios
+Los assets son los archivos que componen el sitio, cuando un usuario lo visita el navegador identifica todos los archivos que debe descargar y procede a hacer las peticiones de cada uno. 
+
+**Uso .htaccess
+Se utiliza para almacenar las imagenes o datos en la cache 
+
+**Concatenar y minificar archivos JS y CSS
+Se minifico los archivos css y js utilizando webpack con el objetivo de reducir el número de peticiones podemos juntar o concatenar todos los archivos JavaScript o CSS del sitio en uno solo

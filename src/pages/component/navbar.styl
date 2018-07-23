@@ -1,6 +1,6 @@
 @require "../container/home.styl"
 .badge 
-    background-color: #6394F8 !important;
+    background-color: #BA004C !important;
     border-radius: 10px !important;
     color: white;
     display: inline-block;
@@ -13,24 +13,26 @@
     
 .navbar
     transition 0.2s ease-in-out
-    background-color #6394F8
-    a
-        text-decoration none
-    .navup
-        background-color #6404F8
-        font-size 14px
-        transition 0.2s ease-in-out
-        height 60px
-        color white
-        transition 0.2s ease
-        .nav-link
+    background-color #00490C
+    +for_breakpoint(uplg)
+        background-color #f6f6f6
+        a
+            text-decoration none
+        .navup
+            background-color #6B3C0D
+            font-size 14px
+            transition 0.2s ease-in-out
+            height 60px
             color white
-            &:hover
-                color black
-                transition 0.4s ease
-    .navbar-nav
+            transition 0.2s ease
+            .nav-link
+                color white !important
+                &:hover
+                    color black
+                    transition 0.4s ease
+        .navbar-nav
         overflow hidden
-        color black
+        color white
         .nav-link
             position relative
             z-index 1
@@ -66,7 +68,7 @@
                 right 0
                 height 2px
                 width 0
-                background white
+                background #6B3C0D
                 transition 400ms ease all
             .nav-link:hover:before,.nav-link:hover:after
                 width 100%

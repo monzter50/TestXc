@@ -2,7 +2,7 @@ import React from 'react'
 
 function Modal(props)
 {
-	console.log("modal: "+ props.LinkVideo)
+	// Se consume la url del video parseandolo anteriormente
 	return(
 		<div className="modal videomodalcont fade" id="videoModal" role="dialog" aria-labelledby="videoModal"
 		aria-hidden="true">

@@ -5,23 +5,22 @@ import SideBar from '../component/sidebar.js'
 import Section from '../component/section.js'
 import Footer from '../component/footer.js'
 import './home.styl';
-
+// Funcion que verifica si el elemento esta vacio y parsea el valor hasta consguir el value del embed 
 const video = (element)=>{
-	if (element == "") {
-		param="?";
+	if (element != "") {
+		var urlYoutube = (element.split('?')[1])
+		var valueUrl= (urlYoutube.split('=')[1])
+		var embedUrl= (valueUrl.split('&')[0])
+		return embedUrl;
 	}
 	else{
-		var param = (element.split('?')[1])
-		var para2= (param.split('=')[1])
-		var para3= (para2.split('&')[0])
-		return para3;
-		console.log("param: "+ para3)
+		var urlYoutube="?";
 	}
 }
 class Home extends Component {
 	constructor(props) {
 		super(props);
-
+		// Se crea los estados para almacenar los valores del api
 		this.state = {
 			items: [],
 			atractivos: [],
@@ -38,7 +37,7 @@ class Home extends Component {
             return results.json()
         })
         .then( data => {
-        	console.log(data[0]);
+        	// Se almacena los valores recibidos del api y se distribuye a los componentes
             this.setState({ items: data[0],
             	atractivos:data[0].atractivos, 
             	images:data[0].img[0],
@@ -53,27 +52,27 @@ class Home extends Component {
         });
 	}
   render() {
-
+  	// Se renderiza todos los componentes funcionales
     return (
-      <div className="App">
-		<Navbar/>
-		<Header/>
-		<div className="container">
-			<div className="row">
-				<Section 
-				event={this.state.atractivos} 
-				element={this.state.items} 
-				image={this.state.images}
-				image2={this.state.images2}
-				image3={this.state.images3}
-				image4={this.state.images4}
-				image5={this.state.images5}
-				video={video(this.state.video)}/>
-				<SideBar url={this.state.url}/>
+		<div className="App">
+			<Navbar/>
+			<Header/>
+			<div className="container bkg-section">
+				<div className="row">
+					<Section 
+					event={this.state.atractivos} 
+					element={this.state.items} 
+					image={this.state.images}
+					image2={this.state.images2}
+					image3={this.state.images3}
+					image4={this.state.images4}
+					image5={this.state.images5}
+					video={video(this.state.video)}/>
+					<SideBar url={this.state.url}/>
+				</div>
 			</div>
+			<Footer/>
 		</div>
-		<Footer/>
-      </div>
     );
   }
 }
